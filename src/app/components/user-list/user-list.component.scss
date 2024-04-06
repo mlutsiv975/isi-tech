@@ -1,0 +1,57 @@
+.table {
+  width: 100%;
+  text-align: left;
+  font-size: 13px;
+  border-spacing: 0 2px;
+  table-layout: fixed;
+
+  &__header-row {
+    height: 55px;
+    background-color: #fff;
+  }
+
+  &__header-cell {
+    text-transform: uppercase;
+    color: #A4A4B5;
+    padding: 0 26px;
+  }
+
+  &__row {
+    height: 56px;
+    background-color: #f4f5f8;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e9eaed;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+  &__cell {
+    color: #3F4254;
+    padding: 0 26px;
+
+    &--action {
+      text-align: right;
+
+      .action-button {
+        width: 56px;
+        height: 24px;
+        border: none;
+        outline: none;
+        background: #5d8fc6;
+        color: #fff;
+        font-size: 12px;
+        border-radius: 3px;
+        cursor: pointer;
+
+        &:hover {
+          background: #4a6f9b;
+        }
+      }
+    }
+  }
+}

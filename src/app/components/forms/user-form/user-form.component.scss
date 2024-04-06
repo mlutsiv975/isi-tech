@@ -1,0 +1,48 @@
+.form {
+  width: 100%;
+
+  .form-control {
+    font-size: 13px;
+    margin-bottom: 16px;
+
+    &__label {
+      margin-bottom: 3px;
+    }
+
+    &__input {
+      display: block;
+      width: 100%;
+      background-color: #F3F6F9;
+      border-radius: 6px;
+      padding: 16px;
+      color: #3F4254;
+      border: none;
+
+      &--email {
+        background: url('/assets/svg/email.svg') no-repeat 16px center #F3F6F9;
+        padding-left: 46px;
+      }
+
+      &--dropdown {
+        appearance: none;
+        position: relative;
+        background: url('/assets/svg/arrow_down.svg') no-repeat calc(100% - 16px) center #F3F6F9;
+        padding-right: 46px;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &.ng-touched.ng-invalid {
+        border: 1px solid #ef7da0;
+      }
+    }
+
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}

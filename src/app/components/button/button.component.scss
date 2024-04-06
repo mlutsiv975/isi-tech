@@ -1,0 +1,28 @@
+.button {
+  min-width: 120px;
+  min-height: 46px;
+  font-size: 14px;
+  border-radius: 6px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &--danger {
+    background-color: #F44682;
+    box-shadow: 0 5px 8px #F4468229;
+
+    &:hover:not([disabled]) {
+      background-color: #b22859;
+    }
+  }
+
+  &--primary {
+    background-color: #2E8FF0;
+    box-shadow: 0 5px 8px #2E8FF029;
+
+    &:hover:not([disabled]) {
+      background-color: #2774ac;
+    }
+  }
+}

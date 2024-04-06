@@ -1,0 +1,9 @@
+.page {
+  padding: 20px;
+
+  &__header {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 16px;
+  }
+}

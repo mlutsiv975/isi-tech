@@ -1,0 +1,17 @@
+<div class="page">
+  <div class="page__header">
+    <app-button (click)="openCreateUserModal()" [buttonType]="ButtonRoleEnum.PRIMARY">Create User</app-button>
+  </div>
+  <div class="page__content">
+    <app-user-list (itemClicked)="onUserItemClick($event)" [users]="users$ | async"></app-user-list>
+  </div>
+
+  <app-modal title="Create new user" *ngIf="isCreateModalVisible" [(isVisible)]="isCreateModalVisible">
+    <app-user-form (onSubmit)="createUser($event)"></app-user-form>
+  </app-modal>
+
+  <app-modal [title]="userFullName" *ngIf="isEditModalVisible" [(isVisible)]="isEditModalVisible">
+    <app-user-form [selectedUser]="selectedUser" (onDelete)="deleteUser()" (onSubmit)="updateUser($event)"></app-user-form>
+  </app-modal>
+
+</div>

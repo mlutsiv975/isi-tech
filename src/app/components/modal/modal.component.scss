@@ -1,0 +1,41 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+
+  .modal {
+    background-color: #fff;
+    min-width: 584px;
+    min-height: 584px;
+    padding: 26px;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 26px;
+
+      &__title {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      &__close-button {
+        background-color: transparent;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        color: #a7a7b7;
+      }
+    }
+
+    .content {
+    }
+  }
+}

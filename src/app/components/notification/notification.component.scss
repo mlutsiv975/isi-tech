@@ -1,0 +1,28 @@
+.notifications-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 30;
+  width: 300px;
+
+  .notification {
+    padding: 22px 26px;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 6px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &--success {
+      background-color: #66BB6A;
+      box-shadow: 0 10px 15px #4CAF505C;
+    }
+
+    &--error {
+      background-color: #EF7DA0;
+      box-shadow: 0 10px 15px #EF7DA05C;
+    }
+  }
+}

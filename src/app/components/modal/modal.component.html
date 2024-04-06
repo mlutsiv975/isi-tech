@@ -1,0 +1,12 @@
+<div class="modal-overlay">
+  <div class="modal">
+    <div class="header">
+      <span class="header__title">{{ title }}</span>
+      <button class="header__close-button" (click)="closeModal()"><img src="./assets/svg/close-24px.svg" alt=""></button>
+    </div>
+    <div class="content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+
+</div>

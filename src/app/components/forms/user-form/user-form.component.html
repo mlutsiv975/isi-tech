@@ -1,0 +1,39 @@
+<form class="form" [formGroup]="userForm" (submit)="submit()" autocomplete="off">
+  <div class="form-control">
+    <label class="form-control__label" for="username">Username*</label>
+    <input appFormError [errorMessages]="errorMessages" class="form-control__input" type="text" id="username" formControlName="username">
+  </div>
+  <div class="form-control">
+    <label class="form-control__label" for="first_name">First name*</label>
+    <input appFormError [errorMessages]="errorMessages" class="form-control__input" type="text" id="first_name" formControlName="first_name">
+  </div>
+  <div class="form-control">
+    <label class="form-control__label" for="last_name">Last name*</label>
+    <input appFormError [errorMessages]="errorMessages" class="form-control__input" type="text" id="last_name" formControlName="last_name">
+  </div>
+  <div class="form-control">
+    <label class="form-control__label" for="email">Email*</label>
+    <div class="email-container">
+      <input appFormError [errorMessages]="errorMessages" class="form-control__input form-control__input--email" type="text" id="email" formControlName="email">
+    </div>
+  </div>
+  <div class="form-control">
+    <label class="form-control__label" for="user_type">Type*</label>
+    <select appFormError [errorMessages]="errorMessages" class="form-control__input form-control__input--dropdown" id="user_type" formControlName="user_type">
+      <option [value]="UserType.ADMIN">Admin</option>
+      <option [value]="UserType.DRIVER">User</option>
+    </select>
+  </div>
+  <div class="form-control">
+    <label class="form-control__label" for="password">Password*</label>
+    <input appFormError [errorMessages]="errorMessages" class="form-control__input" type="password" id="password" formControlName="password">
+  </div>
+  <div class="form-control">
+    <label class="form-control__label" for="repeat_password">Repeat password*</label>
+    <input appFormError [errorMessages]="errorMessages" class="form-control__input" type="password" id="repeat_password" formControlName="repeat_password">
+  </div>
+  <div class="buttons-container">
+    <app-button buttonType="submit">{{ isEditMode ? 'Save' : 'Create' }}</app-button>
+    <app-button (click)="delete()" buttonType="button" *ngIf="isEditMode" [buttonRole]="ButtonRole.DANGER">Delete</app-button>
+  </div>
+</form>
